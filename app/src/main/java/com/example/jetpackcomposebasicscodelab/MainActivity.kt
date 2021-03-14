@@ -77,7 +77,8 @@ fun Greeting(name: String) {
         modifier = Modifier
             .padding(24.dp)
             .background(color = backgroundColor.value)
-            .clickable(onClick = { isSelected.value = !isSelected.value })
+            .clickable(onClick = { isSelected.value = !isSelected.value }),
+        style = MaterialTheme.typography.h1
     )
 }
 
