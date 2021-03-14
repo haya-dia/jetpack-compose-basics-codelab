@@ -18,15 +18,20 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            JetpackComposeBasicsCodelabTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
-            }
+            MyApp()
         }
     }
 }
+
+@Composable
+fun MyApp() {
+    JetpackComposeBasicsCodelabTheme {
+        Surface(color = MaterialTheme.colors.background) {
+            Greeting("Android")
+        }
+    }
+}
+
 
 @Composable
 fun Greeting(name: String) {
@@ -41,7 +46,5 @@ fun Greeting(name: String) {
 @Preview(showBackground = true, name = "Text preview")
 @Composable
 fun DefaultPreview() {
-    JetpackComposeBasicsCodelabTheme {
-        Greeting("Android")
-    }
+    MyApp()
 }
